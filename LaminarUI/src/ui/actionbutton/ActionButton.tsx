@@ -3,14 +3,14 @@ import { Button } from '@mui/material';
 
 type ActionButton = {
     children: React.ReactNode; 
-    variant?: string;
+    variant: string;
 }
 
 export const ActionButton = (props: ActionButton) => {
-  const { children } = props;
+  const { children, variant } = props;
 
   return (
-   <Button {...props}> {children} </Button>
+   <Button variant={variant} {...props} > {children} </Button>
   );
 };
 export default ActionButton
